@@ -25,13 +25,18 @@ class Patient
   end 
   
   def doctors
-    array_docs = []
-    Appointment.all.each do |appointment|
-      if appointment.patient == self 
-        array_docs << appointment.doctor 
-      end 
-    end
-    array_docs.uniq 
+    
+    self.appointments.collect do |appointment|
+      appointment.doctor 
+    end 
+    
+   # array_docs = []
+  #  Appointment.all.each do |appointment|
+  #    if appointment.patient == self 
+  #      array_docs << appointment.doctor 
+  #    end 
+  #  end
+  #  array_docs.uniq 
   end
   
  
