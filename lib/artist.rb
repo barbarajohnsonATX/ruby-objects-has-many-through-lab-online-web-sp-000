@@ -33,7 +33,7 @@ class Artist
     
     #Song.all.each do |song|
     #  if song.artist == self 
-         array_genres << song.genre 
+    #     array_genres << song.genre 
     #  end 
     #end
     #array_genres 
