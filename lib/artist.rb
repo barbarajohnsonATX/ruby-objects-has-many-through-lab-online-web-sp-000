@@ -25,15 +25,18 @@ class Artist
 
   def genres      
     
-    #binding.pry
-    array_genres = []
+    self.songs.collect do |song|
+      song.genre 
+    end 
     
-    Song.all.each do |song|
-      if song.artist == self 
+    #array_genres = []
+    
+    #Song.all.each do |song|
+    #  if song.artist == self 
          array_genres << song.genre 
-      end 
-    end
-    array_genres 
+    #  end 
+    #end
+    #array_genres 
      # binding.pry 
   end 
   
